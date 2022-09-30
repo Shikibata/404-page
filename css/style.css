@@ -33,10 +33,12 @@ h1 {
 
 
 .effect {
-    -webkit-animation: effect 1s infinite linear;
-            animation: effect 1s infinite linear;
-    -webkit-animation-delay: 1.5s;
-            animation-delay: 1.5s;
+    text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 5px;
+    -webkit-animation: effect 1.2s infinite linear;
+            animation: effect 1.2s infinite linear;
 }
 
 .social {
@@ -63,13 +65,27 @@ a {
 a:hover {
     color: var(--secondary);
 }
-/*Added a little effect effects because it's cool so why not...*/
+/*Added a little effect effects because it's cool so why not...
+First part is the moving of the error 404 */
+
 @keyframes effect {
-    0%{
-        transform: translate(-2px,2px) skew(15deg); 
-    }
-    50%{
-        transform: translate(2px,-2px) skew(-15deg); 
-    }
+    0% {
+		transform: translate(0)
+	}
+	20% {
+		transform: translate(-5px, 5px)
+	}
+	40% {
+		transform: translate(-5px, -5px)
+	}
+	60% {
+		transform: translate(5px, 5px)
+	}
+	80% {
+		transform: translate(5px, -5px)
+	}
+	to {
+		transform: translate(0)
+	}
     
 }
